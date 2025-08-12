@@ -24,7 +24,8 @@ mixin _$Item implements DiagnosticableTreeMixin {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  $ItemCopyWith<Item> get copyWith => _$ItemCopyWithImpl<Item>(this as Item, _$identity);
+  $ItemCopyWith<Item> get copyWith =>
+      _$ItemCopyWithImpl<Item>(this as Item, _$identity);
 
   /// Serializes this Item to a JSON map.
   Map<String, dynamic> toJson();
@@ -46,7 +47,8 @@ mixin _$Item implements DiagnosticableTreeMixin {
             other is Item &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.category, category) || other.category == category) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
             (identical(other.effect, effect) || other.effect == effect));
   }
 
@@ -62,7 +64,8 @@ mixin _$Item implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $ItemCopyWith<$Res> {
-  factory $ItemCopyWith(Item value, $Res Function(Item) _then) = _$ItemCopyWithImpl;
+  factory $ItemCopyWith(Item value, $Res Function(Item) _then) =
+      _$ItemCopyWithImpl;
   @useResult
   $Res call({String name, String image, String category, String effect});
 }
@@ -109,7 +112,10 @@ class _$ItemCopyWithImpl<$Res> implements $ItemCopyWith<$Res> {
 @JsonSerializable()
 class _Item with DiagnosticableTreeMixin implements Item {
   const _Item(
-      {required this.name, required this.image, required this.category, required this.effect});
+      {required this.name,
+      required this.image,
+      required this.category,
+      required this.effect});
   factory _Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
 
   @override
@@ -126,7 +132,8 @@ class _Item with DiagnosticableTreeMixin implements Item {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$ItemCopyWith<_Item> get copyWith => __$ItemCopyWithImpl<_Item>(this, _$identity);
+  _$ItemCopyWith<_Item> get copyWith =>
+      __$ItemCopyWithImpl<_Item>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -152,7 +159,8 @@ class _Item with DiagnosticableTreeMixin implements Item {
             other is _Item &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.category, category) || other.category == category) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
             (identical(other.effect, effect) || other.effect == effect));
   }
 
@@ -168,7 +176,8 @@ class _Item with DiagnosticableTreeMixin implements Item {
 
 /// @nodoc
 abstract mixin class _$ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
-  factory _$ItemCopyWith(_Item value, $Res Function(_Item) _then) = __$ItemCopyWithImpl;
+  factory _$ItemCopyWith(_Item value, $Res Function(_Item) _then) =
+      __$ItemCopyWithImpl;
   @override
   @useResult
   $Res call({String name, String image, String category, String effect});

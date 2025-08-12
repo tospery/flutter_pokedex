@@ -27,7 +27,8 @@ mixin _$PokemonState implements DiagnosticableTreeMixin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $PokemonStateCopyWith<PokemonState> get copyWith =>
-      _$PokemonStateCopyWithImpl<PokemonState>(this as PokemonState, _$identity);
+      _$PokemonStateCopyWithImpl<PokemonState>(
+          this as PokemonState, _$identity);
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -51,7 +52,8 @@ mixin _$PokemonState implements DiagnosticableTreeMixin {
             (identical(other.selectedPokemonIndex, selectedPokemonIndex) ||
                 other.selectedPokemonIndex == selectedPokemonIndex) &&
             (identical(other.page, page) || other.page == page) &&
-            (identical(other.canLoadMore, canLoadMore) || other.canLoadMore == canLoadMore) &&
+            (identical(other.canLoadMore, canLoadMore) ||
+                other.canLoadMore == canLoadMore) &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -73,7 +75,8 @@ mixin _$PokemonState implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $PokemonStateCopyWith<$Res> {
-  factory $PokemonStateCopyWith(PokemonState value, $Res Function(PokemonState) _then) =
+  factory $PokemonStateCopyWith(
+          PokemonState value, $Res Function(PokemonState) _then) =
       _$PokemonStateCopyWithImpl;
   @useResult
   $Res call(
@@ -200,7 +203,8 @@ class _PokemonState extends PokemonState with DiagnosticableTreeMixin {
             (identical(other.selectedPokemonIndex, selectedPokemonIndex) ||
                 other.selectedPokemonIndex == selectedPokemonIndex) &&
             (identical(other.page, page) || other.page == page) &&
-            (identical(other.canLoadMore, canLoadMore) || other.canLoadMore == canLoadMore) &&
+            (identical(other.canLoadMore, canLoadMore) ||
+                other.canLoadMore == canLoadMore) &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -221,8 +225,10 @@ class _PokemonState extends PokemonState with DiagnosticableTreeMixin {
 }
 
 /// @nodoc
-abstract mixin class _$PokemonStateCopyWith<$Res> implements $PokemonStateCopyWith<$Res> {
-  factory _$PokemonStateCopyWith(_PokemonState value, $Res Function(_PokemonState) _then) =
+abstract mixin class _$PokemonStateCopyWith<$Res>
+    implements $PokemonStateCopyWith<$Res> {
+  factory _$PokemonStateCopyWith(
+          _PokemonState value, $Res Function(_PokemonState) _then) =
       __$PokemonStateCopyWithImpl;
   @override
   @useResult
@@ -236,7 +242,8 @@ abstract mixin class _$PokemonStateCopyWith<$Res> implements $PokemonStateCopyWi
 }
 
 /// @nodoc
-class __$PokemonStateCopyWithImpl<$Res> implements _$PokemonStateCopyWith<$Res> {
+class __$PokemonStateCopyWithImpl<$Res>
+    implements _$PokemonStateCopyWith<$Res> {
   __$PokemonStateCopyWithImpl(this._self, this._then);
 
   final _PokemonState _self;

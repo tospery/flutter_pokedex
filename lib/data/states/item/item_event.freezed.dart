@@ -22,7 +22,8 @@ mixin _$ItemEvent implements DiagnosticableTreeMixin {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is ItemEvent);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is ItemEvent);
   }
 
   @override
@@ -79,15 +80,18 @@ class ItemLoadStarted with DiagnosticableTreeMixin implements ItemEvent {
 }
 
 /// @nodoc
-abstract mixin class $ItemLoadStartedCopyWith<$Res> implements $ItemEventCopyWith<$Res> {
-  factory $ItemLoadStartedCopyWith(ItemLoadStarted value, $Res Function(ItemLoadStarted) _then) =
+abstract mixin class $ItemLoadStartedCopyWith<$Res>
+    implements $ItemEventCopyWith<$Res> {
+  factory $ItemLoadStartedCopyWith(
+          ItemLoadStarted value, $Res Function(ItemLoadStarted) _then) =
       _$ItemLoadStartedCopyWithImpl;
   @useResult
   $Res call({bool loadAll});
 }
 
 /// @nodoc
-class _$ItemLoadStartedCopyWithImpl<$Res> implements $ItemLoadStartedCopyWith<$Res> {
+class _$ItemLoadStartedCopyWithImpl<$Res>
+    implements $ItemLoadStartedCopyWith<$Res> {
   _$ItemLoadStartedCopyWithImpl(this._self, this._then);
 
   final ItemLoadStarted _self;
@@ -172,7 +176,8 @@ class ItemSelectChanged with DiagnosticableTreeMixin implements ItemEvent {
 }
 
 /// @nodoc
-abstract mixin class $ItemSelectChangedCopyWith<$Res> implements $ItemEventCopyWith<$Res> {
+abstract mixin class $ItemSelectChangedCopyWith<$Res>
+    implements $ItemEventCopyWith<$Res> {
   factory $ItemSelectChangedCopyWith(
           ItemSelectChanged value, $Res Function(ItemSelectChanged) _then) =
       _$ItemSelectChangedCopyWithImpl;
@@ -181,7 +186,8 @@ abstract mixin class $ItemSelectChangedCopyWith<$Res> implements $ItemEventCopyW
 }
 
 /// @nodoc
-class _$ItemSelectChangedCopyWithImpl<$Res> implements $ItemSelectChangedCopyWith<$Res> {
+class _$ItemSelectChangedCopyWithImpl<$Res>
+    implements $ItemSelectChangedCopyWith<$Res> {
   _$ItemSelectChangedCopyWithImpl(this._self, this._then);
 
   final ItemSelectChanged _self;

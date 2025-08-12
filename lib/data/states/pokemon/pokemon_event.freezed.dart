@@ -22,7 +22,8 @@ mixin _$PokemonEvent implements DiagnosticableTreeMixin {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is PokemonEvent);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is PokemonEvent);
   }
 
   @override
@@ -79,7 +80,8 @@ class PokemonLoadStarted with DiagnosticableTreeMixin implements PokemonEvent {
 }
 
 /// @nodoc
-abstract mixin class $PokemonLoadStartedCopyWith<$Res> implements $PokemonEventCopyWith<$Res> {
+abstract mixin class $PokemonLoadStartedCopyWith<$Res>
+    implements $PokemonEventCopyWith<$Res> {
   factory $PokemonLoadStartedCopyWith(
           PokemonLoadStarted value, $Res Function(PokemonLoadStarted) _then) =
       _$PokemonLoadStartedCopyWithImpl;
@@ -88,7 +90,8 @@ abstract mixin class $PokemonLoadStartedCopyWith<$Res> implements $PokemonEventC
 }
 
 /// @nodoc
-class _$PokemonLoadStartedCopyWithImpl<$Res> implements $PokemonLoadStartedCopyWith<$Res> {
+class _$PokemonLoadStartedCopyWithImpl<$Res>
+    implements $PokemonLoadStartedCopyWith<$Res> {
   _$PokemonLoadStartedCopyWithImpl(this._self, this._then);
 
   final PokemonLoadStarted _self;
@@ -111,12 +114,15 @@ class _$PokemonLoadStartedCopyWithImpl<$Res> implements $PokemonLoadStartedCopyW
 
 /// @nodoc
 
-class PokemonLoadMoreStarted with DiagnosticableTreeMixin implements PokemonEvent {
+class PokemonLoadMoreStarted
+    with DiagnosticableTreeMixin
+    implements PokemonEvent {
   const PokemonLoadMoreStarted();
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    properties..add(DiagnosticsProperty('type', 'PokemonEvent.loadMoreStarted'));
+    properties
+      ..add(DiagnosticsProperty('type', 'PokemonEvent.loadMoreStarted'));
   }
 
   @override
@@ -136,7 +142,9 @@ class PokemonLoadMoreStarted with DiagnosticableTreeMixin implements PokemonEven
 
 /// @nodoc
 
-class PokemonSelectChanged with DiagnosticableTreeMixin implements PokemonEvent {
+class PokemonSelectChanged
+    with DiagnosticableTreeMixin
+    implements PokemonEvent {
   const PokemonSelectChanged({required this.pokemonId});
 
   final String pokemonId;
@@ -146,7 +154,8 @@ class PokemonSelectChanged with DiagnosticableTreeMixin implements PokemonEvent 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $PokemonSelectChangedCopyWith<PokemonSelectChanged> get copyWith =>
-      _$PokemonSelectChangedCopyWithImpl<PokemonSelectChanged>(this, _$identity);
+      _$PokemonSelectChangedCopyWithImpl<PokemonSelectChanged>(
+          this, _$identity);
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -160,7 +169,8 @@ class PokemonSelectChanged with DiagnosticableTreeMixin implements PokemonEvent 
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PokemonSelectChanged &&
-            (identical(other.pokemonId, pokemonId) || other.pokemonId == pokemonId));
+            (identical(other.pokemonId, pokemonId) ||
+                other.pokemonId == pokemonId));
   }
 
   @override
@@ -173,16 +183,18 @@ class PokemonSelectChanged with DiagnosticableTreeMixin implements PokemonEvent 
 }
 
 /// @nodoc
-abstract mixin class $PokemonSelectChangedCopyWith<$Res> implements $PokemonEventCopyWith<$Res> {
-  factory $PokemonSelectChangedCopyWith(
-          PokemonSelectChanged value, $Res Function(PokemonSelectChanged) _then) =
+abstract mixin class $PokemonSelectChangedCopyWith<$Res>
+    implements $PokemonEventCopyWith<$Res> {
+  factory $PokemonSelectChangedCopyWith(PokemonSelectChanged value,
+          $Res Function(PokemonSelectChanged) _then) =
       _$PokemonSelectChangedCopyWithImpl;
   @useResult
   $Res call({String pokemonId});
 }
 
 /// @nodoc
-class _$PokemonSelectChangedCopyWithImpl<$Res> implements $PokemonSelectChangedCopyWith<$Res> {
+class _$PokemonSelectChangedCopyWithImpl<$Res>
+    implements $PokemonSelectChangedCopyWith<$Res> {
   _$PokemonSelectChangedCopyWithImpl(this._self, this._then);
 
   final PokemonSelectChanged _self;

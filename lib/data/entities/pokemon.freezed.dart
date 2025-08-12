@@ -67,7 +67,8 @@ mixin _$Pokemon implements DiagnosticableTreeMixin {
             other is Pokemon &&
             (identical(other.number, number) || other.number == number) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) || other.description == description) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             const DeepCollectionEquality().equals(other.types, types) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.height, height) || other.height == height) &&
@@ -77,7 +78,8 @@ mixin _$Pokemon implements DiagnosticableTreeMixin {
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.stats, stats) || other.stats == stats) &&
             (identical(other.baseExp, baseExp) || other.baseExp == baseExp) &&
-            const DeepCollectionEquality().equals(other.evolutions, evolutions) &&
+            const DeepCollectionEquality()
+                .equals(other.evolutions, evolutions) &&
             (identical(other.evolutionReason, evolutionReason) ||
                 other.evolutionReason == evolutionReason));
   }
@@ -109,7 +111,8 @@ mixin _$Pokemon implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $PokemonCopyWith<$Res> {
-  factory $PokemonCopyWith(Pokemon value, $Res Function(Pokemon) _then) = _$PokemonCopyWithImpl;
+  factory $PokemonCopyWith(Pokemon value, $Res Function(Pokemon) _then) =
+      _$PokemonCopyWithImpl;
   @useResult
   $Res call(
       {String number,
@@ -261,7 +264,8 @@ class _Pokemon extends Pokemon with DiagnosticableTreeMixin {
         _eggGroups = eggGroups,
         _evolutions = evolutions,
         super._();
-  factory _Pokemon.fromJson(Map<String, dynamic> json) => _$PokemonFromJson(json);
+  factory _Pokemon.fromJson(Map<String, dynamic> json) =>
+      _$PokemonFromJson(json);
 
   @override
   final String number;
@@ -315,7 +319,8 @@ class _Pokemon extends Pokemon with DiagnosticableTreeMixin {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
-  _$PokemonCopyWith<_Pokemon> get copyWith => __$PokemonCopyWithImpl<_Pokemon>(this, _$identity);
+  _$PokemonCopyWith<_Pokemon> get copyWith =>
+      __$PokemonCopyWithImpl<_Pokemon>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -351,17 +356,20 @@ class _Pokemon extends Pokemon with DiagnosticableTreeMixin {
             other is _Pokemon &&
             (identical(other.number, number) || other.number == number) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.description, description) || other.description == description) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             const DeepCollectionEquality().equals(other._types, _types) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.weight, weight) || other.weight == weight) &&
             (identical(other.genera, genera) || other.genera == genera) &&
-            const DeepCollectionEquality().equals(other._eggGroups, _eggGroups) &&
+            const DeepCollectionEquality()
+                .equals(other._eggGroups, _eggGroups) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.stats, stats) || other.stats == stats) &&
             (identical(other.baseExp, baseExp) || other.baseExp == baseExp) &&
-            const DeepCollectionEquality().equals(other._evolutions, _evolutions) &&
+            const DeepCollectionEquality()
+                .equals(other._evolutions, _evolutions) &&
             (identical(other.evolutionReason, evolutionReason) ||
                 other.evolutionReason == evolutionReason));
   }
@@ -393,7 +401,8 @@ class _Pokemon extends Pokemon with DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class _$PokemonCopyWith<$Res> implements $PokemonCopyWith<$Res> {
-  factory _$PokemonCopyWith(_Pokemon value, $Res Function(_Pokemon) _then) = __$PokemonCopyWithImpl;
+  factory _$PokemonCopyWith(_Pokemon value, $Res Function(_Pokemon) _then) =
+      __$PokemonCopyWithImpl;
   @override
   @useResult
   $Res call(

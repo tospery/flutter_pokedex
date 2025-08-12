@@ -51,13 +51,20 @@ mixin _$ItemState implements DiagnosticableTreeMixin {
             (identical(other.selectedItemIndex, selectedItemIndex) ||
                 other.selectedItemIndex == selectedItemIndex) &&
             (identical(other.page, page) || other.page == page) &&
-            (identical(other.canLoadMore, canLoadMore) || other.canLoadMore == canLoadMore) &&
+            (identical(other.canLoadMore, canLoadMore) ||
+                other.canLoadMore == canLoadMore) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status, const DeepCollectionEquality().hash(items),
-      selectedItemIndex, page, canLoadMore, error);
+  int get hashCode => Object.hash(
+      runtimeType,
+      status,
+      const DeepCollectionEquality().hash(items),
+      selectedItemIndex,
+      page,
+      canLoadMore,
+      error);
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -194,13 +201,20 @@ class _ItemState extends ItemState with DiagnosticableTreeMixin {
             (identical(other.selectedItemIndex, selectedItemIndex) ||
                 other.selectedItemIndex == selectedItemIndex) &&
             (identical(other.page, page) || other.page == page) &&
-            (identical(other.canLoadMore, canLoadMore) || other.canLoadMore == canLoadMore) &&
+            (identical(other.canLoadMore, canLoadMore) ||
+                other.canLoadMore == canLoadMore) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status, const DeepCollectionEquality().hash(_items),
-      selectedItemIndex, page, canLoadMore, error);
+  int get hashCode => Object.hash(
+      runtimeType,
+      status,
+      const DeepCollectionEquality().hash(_items),
+      selectedItemIndex,
+      page,
+      canLoadMore,
+      error);
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -209,8 +223,10 @@ class _ItemState extends ItemState with DiagnosticableTreeMixin {
 }
 
 /// @nodoc
-abstract mixin class _$ItemStateCopyWith<$Res> implements $ItemStateCopyWith<$Res> {
-  factory _$ItemStateCopyWith(_ItemState value, $Res Function(_ItemState) _then) =
+abstract mixin class _$ItemStateCopyWith<$Res>
+    implements $ItemStateCopyWith<$Res> {
+  factory _$ItemStateCopyWith(
+          _ItemState value, $Res Function(_ItemState) _then) =
       __$ItemStateCopyWithImpl;
   @override
   @useResult

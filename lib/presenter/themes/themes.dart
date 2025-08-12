@@ -54,7 +54,7 @@ class AppTheme extends ThemeExtension<AppTheme> {
           foregroundColor: colors.text,
           surfaceTintColor: colors.text,
         ),
-        tabBarTheme: TabBarTheme(
+        tabBarTheme: TabBarThemeData(
           labelColor: colors.text,
           unselectedLabelColor: colors.text.withValues(alpha: 0.4),
         ),

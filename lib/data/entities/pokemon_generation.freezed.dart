@@ -23,7 +23,8 @@ mixin _$PokemonGeneration implements DiagnosticableTreeMixin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $PokemonGenerationCopyWith<PokemonGeneration> get copyWith =>
-      _$PokemonGenerationCopyWithImpl<PokemonGeneration>(this as PokemonGeneration, _$identity);
+      _$PokemonGenerationCopyWithImpl<PokemonGeneration>(
+          this as PokemonGeneration, _$identity);
 
   /// Serializes this PokemonGeneration to a JSON map.
   Map<String, dynamic> toJson();
@@ -42,13 +43,14 @@ mixin _$PokemonGeneration implements DiagnosticableTreeMixin {
         (other.runtimeType == runtimeType &&
             other is PokemonGeneration &&
             (identical(other.title, title) || other.title == title) &&
-            const DeepCollectionEquality().equals(other.pokemonImages, pokemonImages));
+            const DeepCollectionEquality()
+                .equals(other.pokemonImages, pokemonImages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, title, const DeepCollectionEquality().hash(pokemonImages));
+  int get hashCode => Object.hash(
+      runtimeType, title, const DeepCollectionEquality().hash(pokemonImages));
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -66,7 +68,8 @@ abstract mixin class $PokemonGenerationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PokemonGenerationCopyWithImpl<$Res> implements $PokemonGenerationCopyWith<$Res> {
+class _$PokemonGenerationCopyWithImpl<$Res>
+    implements $PokemonGenerationCopyWith<$Res> {
   _$PokemonGenerationCopyWithImpl(this._self, this._then);
 
   final PokemonGeneration _self;
@@ -95,8 +98,11 @@ class _$PokemonGenerationCopyWithImpl<$Res> implements $PokemonGenerationCopyWit
 
 /// @nodoc
 @JsonSerializable()
-class _PokemonGeneration with DiagnosticableTreeMixin implements PokemonGeneration {
-  const _PokemonGeneration({required this.title, required final List<String> pokemonImages})
+class _PokemonGeneration
+    with DiagnosticableTreeMixin
+    implements PokemonGeneration {
+  const _PokemonGeneration(
+      {required this.title, required final List<String> pokemonImages})
       : _pokemonImages = pokemonImages;
   factory _PokemonGeneration.fromJson(Map<String, dynamic> json) =>
       _$PokemonGenerationFromJson(json);
@@ -140,13 +146,14 @@ class _PokemonGeneration with DiagnosticableTreeMixin implements PokemonGenerati
         (other.runtimeType == runtimeType &&
             other is _PokemonGeneration &&
             (identical(other.title, title) || other.title == title) &&
-            const DeepCollectionEquality().equals(other._pokemonImages, _pokemonImages));
+            const DeepCollectionEquality()
+                .equals(other._pokemonImages, _pokemonImages));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, title, const DeepCollectionEquality().hash(_pokemonImages));
+  int get hashCode => Object.hash(
+      runtimeType, title, const DeepCollectionEquality().hash(_pokemonImages));
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -155,7 +162,8 @@ class _PokemonGeneration with DiagnosticableTreeMixin implements PokemonGenerati
 }
 
 /// @nodoc
-abstract mixin class _$PokemonGenerationCopyWith<$Res> implements $PokemonGenerationCopyWith<$Res> {
+abstract mixin class _$PokemonGenerationCopyWith<$Res>
+    implements $PokemonGenerationCopyWith<$Res> {
   factory _$PokemonGenerationCopyWith(
           _PokemonGeneration value, $Res Function(_PokemonGeneration) _then) =
       __$PokemonGenerationCopyWithImpl;
@@ -165,7 +173,8 @@ abstract mixin class _$PokemonGenerationCopyWith<$Res> implements $PokemonGenera
 }
 
 /// @nodoc
-class __$PokemonGenerationCopyWithImpl<$Res> implements _$PokemonGenerationCopyWith<$Res> {
+class __$PokemonGenerationCopyWithImpl<$Res>
+    implements _$PokemonGenerationCopyWith<$Res> {
   __$PokemonGenerationCopyWithImpl(this._self, this._then);
 
   final _PokemonGeneration _self;

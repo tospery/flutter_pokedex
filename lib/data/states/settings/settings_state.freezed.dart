@@ -22,7 +22,8 @@ mixin _$SettingsState implements DiagnosticableTreeMixin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $SettingsStateCopyWith<SettingsState> get copyWith =>
-      _$SettingsStateCopyWithImpl<SettingsState>(this as SettingsState, _$identity);
+      _$SettingsStateCopyWithImpl<SettingsState>(
+          this as SettingsState, _$identity);
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -50,14 +51,16 @@ mixin _$SettingsState implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $SettingsStateCopyWith<$Res> {
-  factory $SettingsStateCopyWith(SettingsState value, $Res Function(SettingsState) _then) =
+  factory $SettingsStateCopyWith(
+          SettingsState value, $Res Function(SettingsState) _then) =
       _$SettingsStateCopyWithImpl;
   @useResult
   $Res call({AppTheme theme});
 }
 
 /// @nodoc
-class _$SettingsStateCopyWithImpl<$Res> implements $SettingsStateCopyWith<$Res> {
+class _$SettingsStateCopyWithImpl<$Res>
+    implements $SettingsStateCopyWith<$Res> {
   _$SettingsStateCopyWithImpl(this._self, this._then);
 
   final SettingsState _self;
@@ -121,8 +124,10 @@ class _SettingsState with DiagnosticableTreeMixin implements SettingsState {
 }
 
 /// @nodoc
-abstract mixin class _$SettingsStateCopyWith<$Res> implements $SettingsStateCopyWith<$Res> {
-  factory _$SettingsStateCopyWith(_SettingsState value, $Res Function(_SettingsState) _then) =
+abstract mixin class _$SettingsStateCopyWith<$Res>
+    implements $SettingsStateCopyWith<$Res> {
+  factory _$SettingsStateCopyWith(
+          _SettingsState value, $Res Function(_SettingsState) _then) =
       __$SettingsStateCopyWithImpl;
   @override
   @useResult
@@ -130,7 +135,8 @@ abstract mixin class _$SettingsStateCopyWith<$Res> implements $SettingsStateCopy
 }
 
 /// @nodoc
-class __$SettingsStateCopyWithImpl<$Res> implements _$SettingsStateCopyWith<$Res> {
+class __$SettingsStateCopyWithImpl<$Res>
+    implements _$SettingsStateCopyWith<$Res> {
   __$SettingsStateCopyWithImpl(this._self, this._then);
 
   final _SettingsState _self;

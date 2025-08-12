@@ -24,7 +24,8 @@ mixin _$PokemonGender implements DiagnosticableTreeMixin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $PokemonGenderCopyWith<PokemonGender> get copyWith =>
-      _$PokemonGenderCopyWithImpl<PokemonGender>(this as PokemonGender, _$identity);
+      _$PokemonGenderCopyWithImpl<PokemonGender>(
+          this as PokemonGender, _$identity);
 
   /// Serializes this PokemonGender to a JSON map.
   Map<String, dynamic> toJson();
@@ -43,14 +44,18 @@ mixin _$PokemonGender implements DiagnosticableTreeMixin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is PokemonGender &&
-            (identical(other.genderless, genderless) || other.genderless == genderless) &&
-            (identical(other.maleRate, maleRate) || other.maleRate == maleRate) &&
-            (identical(other.femaleRate, femaleRate) || other.femaleRate == femaleRate));
+            (identical(other.genderless, genderless) ||
+                other.genderless == genderless) &&
+            (identical(other.maleRate, maleRate) ||
+                other.maleRate == maleRate) &&
+            (identical(other.femaleRate, femaleRate) ||
+                other.femaleRate == femaleRate));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, genderless, maleRate, femaleRate);
+  int get hashCode =>
+      Object.hash(runtimeType, genderless, maleRate, femaleRate);
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -60,14 +65,16 @@ mixin _$PokemonGender implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $PokemonGenderCopyWith<$Res> {
-  factory $PokemonGenderCopyWith(PokemonGender value, $Res Function(PokemonGender) _then) =
+  factory $PokemonGenderCopyWith(
+          PokemonGender value, $Res Function(PokemonGender) _then) =
       _$PokemonGenderCopyWithImpl;
   @useResult
   $Res call({bool genderless, double maleRate, double femaleRate});
 }
 
 /// @nodoc
-class _$PokemonGenderCopyWithImpl<$Res> implements $PokemonGenderCopyWith<$Res> {
+class _$PokemonGenderCopyWithImpl<$Res>
+    implements $PokemonGenderCopyWith<$Res> {
   _$PokemonGenderCopyWithImpl(this._self, this._then);
 
   final PokemonGender _self;
@@ -103,8 +110,11 @@ class _$PokemonGenderCopyWithImpl<$Res> implements $PokemonGenderCopyWith<$Res> 
 @JsonSerializable()
 class _PokemonGender with DiagnosticableTreeMixin implements PokemonGender {
   const _PokemonGender(
-      {required this.genderless, required this.maleRate, required this.femaleRate});
-  factory _PokemonGender.fromJson(Map<String, dynamic> json) => _$PokemonGenderFromJson(json);
+      {required this.genderless,
+      required this.maleRate,
+      required this.femaleRate});
+  factory _PokemonGender.fromJson(Map<String, dynamic> json) =>
+      _$PokemonGenderFromJson(json);
 
   @override
   final bool genderless;
@@ -142,14 +152,18 @@ class _PokemonGender with DiagnosticableTreeMixin implements PokemonGender {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PokemonGender &&
-            (identical(other.genderless, genderless) || other.genderless == genderless) &&
-            (identical(other.maleRate, maleRate) || other.maleRate == maleRate) &&
-            (identical(other.femaleRate, femaleRate) || other.femaleRate == femaleRate));
+            (identical(other.genderless, genderless) ||
+                other.genderless == genderless) &&
+            (identical(other.maleRate, maleRate) ||
+                other.maleRate == maleRate) &&
+            (identical(other.femaleRate, femaleRate) ||
+                other.femaleRate == femaleRate));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, genderless, maleRate, femaleRate);
+  int get hashCode =>
+      Object.hash(runtimeType, genderless, maleRate, femaleRate);
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -158,8 +172,10 @@ class _PokemonGender with DiagnosticableTreeMixin implements PokemonGender {
 }
 
 /// @nodoc
-abstract mixin class _$PokemonGenderCopyWith<$Res> implements $PokemonGenderCopyWith<$Res> {
-  factory _$PokemonGenderCopyWith(_PokemonGender value, $Res Function(_PokemonGender) _then) =
+abstract mixin class _$PokemonGenderCopyWith<$Res>
+    implements $PokemonGenderCopyWith<$Res> {
+  factory _$PokemonGenderCopyWith(
+          _PokemonGender value, $Res Function(_PokemonGender) _then) =
       __$PokemonGenderCopyWithImpl;
   @override
   @useResult
@@ -167,7 +183,8 @@ abstract mixin class _$PokemonGenderCopyWith<$Res> implements $PokemonGenderCopy
 }
 
 /// @nodoc
-class __$PokemonGenderCopyWithImpl<$Res> implements _$PokemonGenderCopyWith<$Res> {
+class __$PokemonGenderCopyWithImpl<$Res>
+    implements _$PokemonGenderCopyWith<$Res> {
   __$PokemonGenderCopyWithImpl(this._self, this._then);
 
   final _PokemonGender _self;
@@ -213,7 +230,8 @@ mixin _$PokemonStats implements DiagnosticableTreeMixin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $PokemonStatsCopyWith<PokemonStats> get copyWith =>
-      _$PokemonStatsCopyWithImpl<PokemonStats>(this as PokemonStats, _$identity);
+      _$PokemonStatsCopyWithImpl<PokemonStats>(
+          this as PokemonStats, _$identity);
 
   /// Serializes this PokemonStats to a JSON map.
   Map<String, dynamic> toJson();
@@ -247,8 +265,8 @@ mixin _$PokemonStats implements DiagnosticableTreeMixin {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, attack, specialAttack, defense, specialDefense, hp, speed);
+  int get hashCode => Object.hash(
+      runtimeType, attack, specialAttack, defense, specialDefense, hp, speed);
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -258,10 +276,17 @@ mixin _$PokemonStats implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $PokemonStatsCopyWith<$Res> {
-  factory $PokemonStatsCopyWith(PokemonStats value, $Res Function(PokemonStats) _then) =
+  factory $PokemonStatsCopyWith(
+          PokemonStats value, $Res Function(PokemonStats) _then) =
       _$PokemonStatsCopyWithImpl;
   @useResult
-  $Res call({int attack, int specialAttack, int defense, int specialDefense, int hp, int speed});
+  $Res call(
+      {int attack,
+      int specialAttack,
+      int defense,
+      int specialDefense,
+      int hp,
+      int speed});
 }
 
 /// @nodoc
@@ -323,7 +348,8 @@ class _PokemonStats extends PokemonStats with DiagnosticableTreeMixin {
       required this.hp,
       required this.speed})
       : super._();
-  factory _PokemonStats.fromJson(Map<String, dynamic> json) => _$PokemonStatsFromJson(json);
+  factory _PokemonStats.fromJson(Map<String, dynamic> json) =>
+      _$PokemonStatsFromJson(json);
 
   @override
   final int attack;
@@ -382,8 +408,8 @@ class _PokemonStats extends PokemonStats with DiagnosticableTreeMixin {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, attack, specialAttack, defense, specialDefense, hp, speed);
+  int get hashCode => Object.hash(
+      runtimeType, attack, specialAttack, defense, specialDefense, hp, speed);
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -392,16 +418,25 @@ class _PokemonStats extends PokemonStats with DiagnosticableTreeMixin {
 }
 
 /// @nodoc
-abstract mixin class _$PokemonStatsCopyWith<$Res> implements $PokemonStatsCopyWith<$Res> {
-  factory _$PokemonStatsCopyWith(_PokemonStats value, $Res Function(_PokemonStats) _then) =
+abstract mixin class _$PokemonStatsCopyWith<$Res>
+    implements $PokemonStatsCopyWith<$Res> {
+  factory _$PokemonStatsCopyWith(
+          _PokemonStats value, $Res Function(_PokemonStats) _then) =
       __$PokemonStatsCopyWithImpl;
   @override
   @useResult
-  $Res call({int attack, int specialAttack, int defense, int specialDefense, int hp, int speed});
+  $Res call(
+      {int attack,
+      int specialAttack,
+      int defense,
+      int specialDefense,
+      int hp,
+      int speed});
 }
 
 /// @nodoc
-class __$PokemonStatsCopyWithImpl<$Res> implements _$PokemonStatsCopyWith<$Res> {
+class __$PokemonStatsCopyWithImpl<$Res>
+    implements _$PokemonStatsCopyWith<$Res> {
   __$PokemonStatsCopyWithImpl(this._self, this._then);
 
   final _PokemonStats _self;

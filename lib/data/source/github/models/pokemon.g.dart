@@ -9,8 +9,20 @@ part of 'pokemon.dart';
 GithubPokemonModel _$GithubPokemonModelFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['name', 'id', 'imageurl', 'typeofpokemon', 'genderless'],
-    disallowNullValues: const ['name', 'id', 'imageurl', 'typeofpokemon', 'genderless'],
+    requiredKeys: const [
+      'name',
+      'id',
+      'imageurl',
+      'typeofpokemon',
+      'genderless'
+    ],
+    disallowNullValues: const [
+      'name',
+      'id',
+      'imageurl',
+      'typeofpokemon',
+      'genderless'
+    ],
   );
   return GithubPokemonModel(
     json['name'] as String,
@@ -22,9 +34,12 @@ GithubPokemonModel _$GithubPokemonModelFromJson(Map<String, dynamic> json) {
     json['category'] as String? ?? '',
     json['weight'] as String? ?? '',
     (json['typeofpokemon'] as List<dynamic>).map((e) => e as String).toList(),
-    (json['weaknesses'] as List<dynamic>?)?.map((e) => e as String).toList() ?? [],
-    (json['evolutions'] as List<dynamic>?)?.map((e) => e as String).toList() ?? [],
-    (json['abilities'] as List<dynamic>?)?.map((e) => e as String).toList() ?? [],
+    (json['weaknesses'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+        [],
+    (json['evolutions'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+        [],
+    (json['abilities'] as List<dynamic>?)?.map((e) => e as String).toList() ??
+        [],
     json['hp'] as num? ?? 0,
     json['attack'] as num? ?? 0,
     json['defense'] as num? ?? 0,
@@ -43,7 +58,8 @@ GithubPokemonModel _$GithubPokemonModelFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$GithubPokemonModelToJson(GithubPokemonModel instance) => <String, dynamic>{
+Map<String, dynamic> _$GithubPokemonModelToJson(GithubPokemonModel instance) =>
+    <String, dynamic>{
       'name': instance.name,
       'id': instance.id,
       'imageurl': instance.imageUrl,

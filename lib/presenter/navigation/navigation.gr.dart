@@ -14,7 +14,7 @@ part of 'navigation.dart';
 /// [HomePage]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
-      : super(HomeRoute.name, initialChildren: children);
+    : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
@@ -30,7 +30,7 @@ class HomeRoute extends PageRouteInfo<void> {
 /// [ItemsPage]
 class ItemsRoute extends PageRouteInfo<void> {
   const ItemsRoute({List<PageRouteInfo>? children})
-      : super(ItemsRoute.name, initialChildren: children);
+    : super(ItemsRoute.name, initialChildren: children);
 
   static const String name = 'ItemsRoute';
 
@@ -46,7 +46,7 @@ class ItemsRoute extends PageRouteInfo<void> {
 /// [PokedexPage]
 class PokedexRoute extends PageRouteInfo<void> {
   const PokedexRoute({List<PageRouteInfo>? children})
-      : super(PokedexRoute.name, initialChildren: children);
+    : super(PokedexRoute.name, initialChildren: children);
 
   static const String name = 'PokedexRoute';
 
@@ -66,11 +66,11 @@ class PokemonInfoRoute extends PageRouteInfo<PokemonInfoRouteArgs> {
     required String id,
     List<PageRouteInfo>? children,
   }) : super(
-          PokemonInfoRoute.name,
-          args: PokemonInfoRouteArgs(key: key, id: id),
-          rawPathParams: {'id': id},
-          initialChildren: children,
-        );
+         PokemonInfoRoute.name,
+         args: PokemonInfoRouteArgs(key: key, id: id),
+         rawPathParams: {'id': id},
+         initialChildren: children,
+       );
 
   static const String name = 'PokemonInfoRoute';
 
@@ -103,7 +103,7 @@ class PokemonInfoRouteArgs {
 /// [SplashPage]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute({List<PageRouteInfo>? children})
-      : super(SplashRoute.name, initialChildren: children);
+    : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 
@@ -119,7 +119,7 @@ class SplashRoute extends PageRouteInfo<void> {
 /// [TypeEffectPage]
 class TypeEffectRoute extends PageRouteInfo<void> {
   const TypeEffectRoute({List<PageRouteInfo>? children})
-      : super(TypeEffectRoute.name, initialChildren: children);
+    : super(TypeEffectRoute.name, initialChildren: children);
 
   static const String name = 'TypeEffectRoute';
 

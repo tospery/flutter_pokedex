@@ -15,7 +15,8 @@ import 'package:injectable/injectable.dart' as _i526;
 import 'package:pokedex/data/repositories/item_repository.dart' as _i282;
 import 'package:pokedex/data/repositories/item_repository.default.dart' as _i25;
 import 'package:pokedex/data/repositories/pokemon_repository.dart' as _i456;
-import 'package:pokedex/data/repositories/pokemon_repository.default.dart' as _i525;
+import 'package:pokedex/data/repositories/pokemon_repository.default.dart'
+    as _i525;
 import 'package:pokedex/data/source/github/github_datasource.dart' as _i408;
 import 'package:pokedex/data/source/github/network.dart' as _i510;
 import 'package:pokedex/data/source/local/local_datasource.dart' as _i880;
@@ -47,9 +48,10 @@ extension GetItInjectableX on _i174.GetIt {
       preResolve: true,
     );
     gh.singleton<_i240.SettingsBloc>(() => _i240.SettingsBloc());
-    gh.singleton<_i510.NetworkManager>(() => _i510.NetworkManager(dio: gh<_i361.Dio>()));
-    gh.singleton<_i408.GithubDataSource>(
-        () => _i408.GithubDataSource(networkManager: gh<_i510.NetworkManager>()));
+    gh.singleton<_i510.NetworkManager>(
+        () => _i510.NetworkManager(dio: gh<_i361.Dio>()));
+    gh.singleton<_i408.GithubDataSource>(() =>
+        _i408.GithubDataSource(networkManager: gh<_i510.NetworkManager>()));
     gh.singleton<_i456.PokemonRepository>(() => _i525.PokemonDefaultRepository(
           githubDataSource: gh<_i408.GithubDataSource>(),
           localDataSource: gh<_i880.LocalDataSource>(),
@@ -58,15 +60,16 @@ extension GetItInjectableX on _i174.GetIt {
           githubDataSource: gh<_i408.GithubDataSource>(),
           localDataSource: gh<_i880.LocalDataSource>(),
         ));
-    gh.singleton<_i577.PokemonBloc>(
-        () => _i577.PokemonBloc(pokemonRepository: gh<_i456.PokemonRepository>()));
-    gh.singleton<_i988.GetAllPokemonsUseCase>(
-        () => _i988.GetAllPokemonsUseCase(pokemonRepository: gh<_i456.PokemonRepository>()));
-    gh.singleton<_i988.GetPokemonsUseCase>(
-        () => _i988.GetPokemonsUseCase(pokemonRepository: gh<_i456.PokemonRepository>()));
-    gh.singleton<_i988.GetPokemonUseCase>(
-        () => _i988.GetPokemonUseCase(pokemonRepository: gh<_i456.PokemonRepository>()));
-    gh.singleton<_i622.ItemBloc>(() => _i622.ItemBloc(itemRepository: gh<_i282.ItemRepository>()));
+    gh.singleton<_i577.PokemonBloc>(() =>
+        _i577.PokemonBloc(pokemonRepository: gh<_i456.PokemonRepository>()));
+    gh.singleton<_i988.GetAllPokemonsUseCase>(() => _i988.GetAllPokemonsUseCase(
+        pokemonRepository: gh<_i456.PokemonRepository>()));
+    gh.singleton<_i988.GetPokemonsUseCase>(() => _i988.GetPokemonsUseCase(
+        pokemonRepository: gh<_i456.PokemonRepository>()));
+    gh.singleton<_i988.GetPokemonUseCase>(() => _i988.GetPokemonUseCase(
+        pokemonRepository: gh<_i456.PokemonRepository>()));
+    gh.singleton<_i622.ItemBloc>(
+        () => _i622.ItemBloc(itemRepository: gh<_i282.ItemRepository>()));
     gh.singleton<_i416.GetItemUseCase>(
         () => _i416.GetItemUseCase(itemRepository: gh<_i282.ItemRepository>()));
     return this;

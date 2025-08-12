@@ -17,7 +17,8 @@ _Pokemon _$PokemonFromJson(Map<String, dynamic> json) => _Pokemon(
       height: json['height'] as String,
       weight: json['weight'] as String,
       genera: json['genera'] as String,
-      eggGroups: (json['eggGroups'] as List<dynamic>).map((e) => e as String).toList(),
+      eggGroups:
+          (json['eggGroups'] as List<dynamic>).map((e) => e as String).toList(),
       gender: PokemonGender.fromJson(json['gender'] as Map<String, dynamic>),
       stats: PokemonStats.fromJson(json['stats'] as Map<String, dynamic>),
       baseExp: (json['baseExp'] as num).toDouble(),

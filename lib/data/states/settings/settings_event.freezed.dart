@@ -22,7 +22,8 @@ mixin _$SettingsEvent implements DiagnosticableTreeMixin {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $SettingsEventCopyWith<SettingsEvent> get copyWith =>
-      _$SettingsEventCopyWithImpl<SettingsEvent>(this as SettingsEvent, _$identity);
+      _$SettingsEventCopyWithImpl<SettingsEvent>(
+          this as SettingsEvent, _$identity);
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -50,14 +51,16 @@ mixin _$SettingsEvent implements DiagnosticableTreeMixin {
 
 /// @nodoc
 abstract mixin class $SettingsEventCopyWith<$Res> {
-  factory $SettingsEventCopyWith(SettingsEvent value, $Res Function(SettingsEvent) _then) =
+  factory $SettingsEventCopyWith(
+          SettingsEvent value, $Res Function(SettingsEvent) _then) =
       _$SettingsEventCopyWithImpl;
   @useResult
   $Res call({AppTheme theme});
 }
 
 /// @nodoc
-class _$SettingsEventCopyWithImpl<$Res> implements $SettingsEventCopyWith<$Res> {
+class _$SettingsEventCopyWithImpl<$Res>
+    implements $SettingsEventCopyWith<$Res> {
   _$SettingsEventCopyWithImpl(this._self, this._then);
 
   final SettingsEvent _self;
@@ -81,7 +84,9 @@ class _$SettingsEventCopyWithImpl<$Res> implements $SettingsEventCopyWith<$Res> 
 
 /// @nodoc
 
-class SettingsThemeChanged with DiagnosticableTreeMixin implements SettingsEvent {
+class SettingsThemeChanged
+    with DiagnosticableTreeMixin
+    implements SettingsEvent {
   const SettingsThemeChanged(this.theme);
 
   @override
@@ -93,7 +98,8 @@ class SettingsThemeChanged with DiagnosticableTreeMixin implements SettingsEvent
   @JsonKey(includeFromJson: false, includeToJson: false)
   @pragma('vm:prefer-inline')
   $SettingsThemeChangedCopyWith<SettingsThemeChanged> get copyWith =>
-      _$SettingsThemeChangedCopyWithImpl<SettingsThemeChanged>(this, _$identity);
+      _$SettingsThemeChangedCopyWithImpl<SettingsThemeChanged>(
+          this, _$identity);
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
@@ -120,9 +126,10 @@ class SettingsThemeChanged with DiagnosticableTreeMixin implements SettingsEvent
 }
 
 /// @nodoc
-abstract mixin class $SettingsThemeChangedCopyWith<$Res> implements $SettingsEventCopyWith<$Res> {
-  factory $SettingsThemeChangedCopyWith(
-          SettingsThemeChanged value, $Res Function(SettingsThemeChanged) _then) =
+abstract mixin class $SettingsThemeChangedCopyWith<$Res>
+    implements $SettingsEventCopyWith<$Res> {
+  factory $SettingsThemeChangedCopyWith(SettingsThemeChanged value,
+          $Res Function(SettingsThemeChanged) _then) =
       _$SettingsThemeChangedCopyWithImpl;
   @override
   @useResult
@@ -130,7 +137,8 @@ abstract mixin class $SettingsThemeChangedCopyWith<$Res> implements $SettingsEve
 }
 
 /// @nodoc
-class _$SettingsThemeChangedCopyWithImpl<$Res> implements $SettingsThemeChangedCopyWith<$Res> {
+class _$SettingsThemeChangedCopyWithImpl<$Res>
+    implements $SettingsThemeChangedCopyWith<$Res> {
   _$SettingsThemeChangedCopyWithImpl(this._self, this._then);
 
   final SettingsThemeChanged _self;

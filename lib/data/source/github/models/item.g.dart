@@ -19,7 +19,8 @@ GithubItemModel _$GithubItemModelFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$GithubItemModelToJson(GithubItemModel instance) => <String, dynamic>{
+Map<String, dynamic> _$GithubItemModelToJson(GithubItemModel instance) =>
+    <String, dynamic>{
       'name': instance.name,
       'category': instance.category,
       'imageurl': instance.imageurl,
